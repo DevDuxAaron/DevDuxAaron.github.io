@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Menu fijo -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="inicio">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="inicio" >
         <a class="navbar-brand" href="#">Aaron Joel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
     </nav>
     <!-- /Menu fijo -->
     <!-- Menu movil -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg bubble">
         <a class="navbar-brand" href="#">Aaron Joel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,21 +48,21 @@
         
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#projects">Proyectos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#perfil">Perfil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#writeMe">Escr&iacute;beme</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">M&aacute;s sobre m&iacute;</a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#perfil">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#writeMe">Escr&iacute;beme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">M&aacute;s sobre m&iacute;</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -171,13 +171,13 @@
                 <form>
                     <div class="form-group text-center">
                         <label for="exampleFormControlInput1">M&aacute;ndame un email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
                     </div>
                     <div class="form-group text-center">
                         <label for="exampleFormControlTextarea1">Déjame tus comentarios</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <div class="col-md-2 offset-5">
+                    <div class="col-sm-2 offset-sm-5">
                         <button type="submit" class="btn btn-primary mb-2">Enviar</button>
                     </div>
                 </form>
