@@ -168,6 +168,8 @@
            this.subnivel = 0
            this.iluminarSecuencia()
            this.agregarEventosClick()
+           swal('Felicidades','Subes un nivel', 'success')
+              .then(this.inicializar())
          }
 
          transformarNumeroAColor(num) {
@@ -247,11 +249,11 @@
            }
          }
          ganoElJuego(){
-           swal('Platzi','Ganaste el juego', 'success')
+           swal('Felicidades','Ganaste el juego', 'success')
               .then(this.inicializar())
          }
          perdioElJuego(){
-           swal('Platzi','Lo siento perdiste la partida', 'error')
+           swal('Cody','Cody te venció en esta ocasión', 'error')
               .then( () => {
                 this.eliminarEventosClick()
                 this.inicializar()
