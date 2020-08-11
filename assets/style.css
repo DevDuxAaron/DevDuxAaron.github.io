@@ -1,9 +1,37 @@
-body{
-    background-image: url(https://images.pexels.com/photos/163999/pexels-photo-163999.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
-    background-attachment: fixed;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('./back.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-#header{
-    color: rgb(231, 236, 255);
-    font-family: 'Righteous', cursive;
-    font-weight: 500px;
+a {
+    cursor: pointer;
 }
+.menu {
+    display: flex;
+    justify-content: center;
+}
+.menu-option , .menu-social{
+    color: white;
+    padding: 20px;
+}
+.menu-option:hover , .menu-social :hover {
+    background: rgb(229, 57, 60);
+}
+.menu-social {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.menu-social i{
+    height: 38px;
+    width: 60px;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    padding-top: 18px;
+}
+
+

@@ -4,206 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./icons/style.css">
     <title>Aaron Joel</title>
 </head>
 <body>
-    <!-- Menu fijo -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark" id="inicio" >
-        <a class="navbar-brand" href="#">Aaron Joel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#perfil">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#writeMe">Escr&iacute;beme</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">M&aacute;s sobre m&iacute;</a>
-                </li>
-            </ul>
-        </div>
+    <nav class="menu">
+        <a class="menu-option">Home</a>
+        <a class="menu-option">About me</a>
+        <a class="menu-option">Portfolio</a>
+        <a class="menu-option">Services</a>
+        <a class="menu-option">Contact me</a>
+        <a class="menu-social">
+            <i class="icon-twitter"></i>
+            <i class="icon-github"></i>
+            <!-- <i>Platzi</i> -->
+            <!-- <i class="icon-gmail"></i> -->
+            <i class="icon-instagram"></i>
+        </a>
     </nav>
-    <!-- /Menu fijo -->
-    <!-- Menu movil -->
-    <nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Aaron Joel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#perfil">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#writeMe">Escr&iacute;beme</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">M&aacute;s sobre m&iacute;</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- /Menu movil -->
-    <!-- Header -->
-    <header id="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h1>Hola! Soy Aaron Joel, desarrollador frontend junior apasionado por el desarrollo web</h1>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- /Header -->
-    <!-- Proyectos -->
-    <div class="container" id="projects">
-
-        <div class="row text-center">
-            <div class="col-sm-12 col-md-12">
-                <h1>Proyectos en los que particip&eacute;</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card text-center mb-2" style="width: 18rem;">
-                    <img src="https://images.pexels.com/photos/2148217/pexels-photo-2148217.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="card-img-top" alt="Primer proyecto">
-                    <div class="card-body">
-                      <h5 class="card-title">Juego de Sim&oacute;n dice</h5>
-                      <p class="card-text">Juego desarrollado durante el curso de Fundamentos de Javascript en Platzi.</p>
-                      <a href="./juegoDeSimonDiceByJLQ.html" class="btn btn-primary">Echa un vistazo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-center mb-2" style="width: 18rem;">
-                    <img src="https://images.pexels.com/photos/2089379/pexels-photo-2089379.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="card-img-top" alt="Segundo proyecto">
-                    <div class="card-body">
-                      <h5 class="card-title">Amaze Movies</h5>
-                      <p class="card-text">Aplicación de pel&iacute;culas desarrolada en Java durante el 
-                          curso de Java en Platzi.</p>
-                      <a href="#" class="btn btn-primary">Proyecto en construcci&oacute;n</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card text-center mb-2" style="width: 18rem;">
-                    <img src="https://images.pexels.com/photos/92904/pexels-photo-92904.jpeg?cs=srgb&dl=cellphone-codes-coding-92904.jpg&fm=jpg" class="card-img-top" alt="Tercer proyecto">
-                    <div class="card-body">
-                      <h5 class="card-title">Platzi ventas</h5>
-                      <p class="card-text">Aplicación de terminal, desarrollada en python para llevar registro de 
-                          clientes.
-                      </p>
-                      <a href="#" class="btn btn-primary">Echa un vistazo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="card text-center mb-2" style="width: 18rem;">
-                    <img src="https://images.pexels.com/photos/2148217/pexels-photo-2148217.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="card-img-top" alt="Primer proyecto">
-                    <div class="card-body">
-                      <h5 class="card-title">Parte visual Login</h5>
-                      <p class="card-text">Tiempo Libre practicando css y html</p>
-                      <a href="./Loginsystem/index.html" class="btn btn-primary">Echa un vistazo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Perfil -->
-    <div class="container" id="perfil">
-        <br>
-        <br>
-        <div class="row text-center">
-            <div class="col-sm-12 col-md-12">
-                <h1>Conoce m&aacute;s sobre m&iacute;</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-3"></div>
-            <div class="col-sm-12 col-md-6">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                        <img src="..." class="card-img" alt="Foto Aaron">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Aaron Joel Limachi Quispe</h5>
-                            <p class="card-text">Hola! Mi nombre es Aaron Joel y soy desarrollador frontend junior, cursando estudios
-                                universitarios. Me emociona tomar nuevos retos al aprender de programaci&oacute;n en este fabuloso camino.
-                            </p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3"></div>
-        </div>
-    </div>
-    <!-- /Perfil -->
-    <!-- Form -->
-    <div class="container" id="writeMe">
-        <br>
-        <div class="row text-center">
-            
-            <div class="col-sm-12 col-md-12">
-                <h1>Trabajemos juntos</h1>
-            </div>
-            
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-3"></div>
-            <div class="col-sm-12 col-md-6">
-                <form>
-                    <div class="form-group text-center">
-                        <label for="exampleFormControlInput1">M&aacute;ndame un email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
-                    </div>
-                    <div class="form-group text-center">
-                        <label for="exampleFormControlTextarea1">Déjame tus comentarios</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="col-sm-2 offset-sm-5">
-                        <button type="submit" class="btn btn-primary mb-2">Enviar</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-sm-12 col-md-3"></div>
-        </div>
-    </div>
-    <!-- /Form -->
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div style="height: 1000px;"></div>
+    <div style="height: 1000px;"></div>
+    <div style="height: 1000px;"></div>
 </body>
 </html>
