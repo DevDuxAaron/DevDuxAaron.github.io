@@ -23,8 +23,6 @@ ul{
     display: flex;
     justify-content: center;
 }
-/* .menu .menu-item {
-} */
 .menu-item .menu-option {
     color: white;
     padding: 1.3em;
