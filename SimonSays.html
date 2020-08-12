@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simon says</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./icons/style.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #1d084e;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      .gameboard {
+        height: 100vh;
+        width: 100vh;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        max-height: 60vh;
+        max-width: 60vh;
+      }
+
+      .color {
+        width: 50%;
+        height: 50%;
+        display: inline-block;
+      }
+
+      .left {
+        float: left;
+      }
+
+      .right {
+        float: left;
+      }
+
+      .celeste {
+        background: #26b3c0;
+      }
+
+      .celeste.light {
+        background: #90dde6;
+      }
+
+      .violeta {
+        background: #a629c2;
+      }
+
+      .violeta.light {
+        background: #e056fd;
+      }
+
+      .naranja {
+        background: #cc8330;
+      }
+
+      .naranja.light {
+        background: #ffa743;
+      }
+
+      .verde {
+        background: #56ad30;
+      }
+
+      .verde.light {
+        background: #badc58;
+      }
+
+      .btn-start {
+        width: 400px;
+        height: 100px;
+        background: #ecf0f1;
+        color: #2c3e50;
+        font-size: 2.5rem;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 200px);
+      }
+
+      .hide {
+        display: none;
+      }
+      .btn-start {
+        cursor: pointer;
+        width: 420px;
+        height: 100px;
+        background: #ecf0f1;
+        color: #2c3e50;
+        border: none;
+        border-bottom: 4px solid #c4c6c7;
+        border-radius: 8px;
+        font-size: 3em;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 210px);
+        transition: 0.3s;
+        outline: none;
+      }
+
+      .btn-start:hover {
+        color: #ecf0f1;
+        background: #2c3e50;
+        border-bottom: 4px solid #1f3346;
+      }
+
+      .btn-start:active {
+        transform: scale(0.95);
+      }
+
+      * {
+        font-family: "Arial";
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu-item">
+          <a class="menu-option" href="./index.html">Home</a>
+        </li> 
+        <li class="menu-item">
+          <a class="menu-option" href="">About me</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-option">Portfolio</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-option">Services</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-option">Contact me</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-option" href="./SimonSays.html">Games</a>
+        </li>
+      </ul>
+    </nav>
+    <section style="color: white; padding: 30px;">
+      <p>El juego de Simon dice consiste en repetir la secuencia que aparece en el tablero. Vence la secuencia que Cody crea para ti</p>
+      <span style="display: flex; justify-content: center;">Good Luck</span>
+    </section>
+    <div class="gameboard">
+      <div id="celeste" class="color celeste left" data-color="celeste"></div>
+      <div id="violeta" class="color violeta right" data-color="violeta"></div>
+      <div id="naranja" class="color naranja left" data-color="naranja"></div>
+      <div id="verde" class="color verde right" data-color="verde"></div>
+      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">
+        Empezar a jugar!
+      </button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script>
+      const celeste = document.getElementById("celeste");
+      const violeta = document.getElementById("violeta");
+      const naranja = document.getElementById("naranja");
+      const verde = document.getElementById("verde");
+      const btnEmpezar = document.getElementById("btnEmpezar");
+      const ULTIMO_NIVEL = 10;
+
+      class Juego {
+        constructor() {
+          this.inicializar = this.inicializar.bind(this);
+          this.inicializar();
+          this.generarSecuencia();
+          setTimeout(this.siguienteNivel, 400);
+        }
+
+        inicializar() {
+          this.siguienteNivel = this.siguienteNivel.bind(this);
+          this.elegirColor = this.elegirColor.bind(this);
+          this.toggleBtnEmpezar();
+          this.nivel = 1;
+          this.colores = {
+            celeste,
+            violeta,
+            naranja,
+            verde,
+          };
+        }
+
+        toggleBtnEmpezar() {
+          if (btnEmpezar.classList.contains("hide")) {
+            btnEmpezar.classList.remove("hide");
+          } else {
+            btnEmpezar.classList.add("hide");
+          }
+        }
+
+        generarSecuencia() {
+          this.secuencia = new Array(ULTIMO_NIVEL)
+            .fill(0)
+            .map((n) => Math.floor(Math.random() * 4));
+        }
+
+        siguienteNivel() {
+          this.subnivel = 0;
+          this.iluminarSecuencia();
+          this.agregarEventosClick();
+        }
+
+        transformarNumeroAColor(num) {
+          switch (num) {
+            case 0:
+              return "celeste";
+            case 1:
+              return "violeta";
+            case 2:
+              return "naranja";
+            case 3:
+              return "verde";
+          }
+        }
+
+        transformarColorANumero(color) {
+          switch (color) {
+            case "celeste":
+              return 0;
+            case "violeta":
+              return 1;
+            case "naranja":
+              return 2;
+            case "verde":
+              return 3;
+          }
+        }
+
+        iluminarSecuencia() {
+          for (let i = 0; i < this.nivel; i++) {
+            const color = this.transformarNumeroAColor(this.secuencia[i]);
+            setTimeout(() => this.iluminarColor(color), 1000 * i);
+          }
+        }
+
+        iluminarColor(color) {
+          this.colores[color].classList.add("light");
+          setTimeout(() => this.apagarColor(color), 350);
+        }
+
+        apagarColor(color) {
+          this.colores[color].classList.remove("light");
+        }
+
+        agregarEventosClick() {
+          this.colores.celeste.addEventListener("click", this.elegirColor);
+          this.colores.verde.addEventListener("click", this.elegirColor);
+          this.colores.violeta.addEventListener("click", this.elegirColor);
+          this.colores.naranja.addEventListener("click", this.elegirColor);
+        }
+
+        eliminarEventosClick() {
+          this.colores.celeste.removeEventListener("click", this.elegirColor);
+          this.colores.verde.removeEventListener("click", this.elegirColor);
+          this.colores.violeta.removeEventListener("click", this.elegirColor);
+          this.colores.naranja.removeEventListener("click", this.elegirColor);
+        }
+
+        elegirColor(ev) {
+          const nombreColor = ev.target.dataset.color;
+          const numeroColor = this.transformarColorANumero(nombreColor);
+          this.iluminarColor(nombreColor);
+          if (numeroColor === this.secuencia[this.subnivel]) {
+            this.subnivel++;
+            if (this.subnivel === this.nivel) {
+              this.nivel++;
+              this.eliminarEventosClick();
+              if (this.nivel === ULTIMO_NIVEL + 1) {
+                this.ganoElJuego();
+              } else {
+                setTimeout(this.siguienteNivel, 1500);
+              }
+            }
+          } else {
+            this.perdioElJuego();
+          }
+        }
+        ganoElJuego() {
+          swal("Felicidades", "Ganaste el juego", "success").then(
+            this.inicializar()
+          );
+        }
+        perdioElJuego() {
+          swal("Perdiste", "Cody te venció en esta ocasión", "error").then(() => {
+            this.eliminarEventosClick();
+            this.inicializar();
+          });
+        }
+      }
+
+      function empezarJuego() {
+        window.juego = new Juego();
+      }
+    </script>
+  </body>
+</html>
