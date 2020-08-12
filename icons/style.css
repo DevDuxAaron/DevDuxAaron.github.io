@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?x2uakf');
-  src:  url('fonts/icomoon.eot?x2uakf#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?x2uakf') format('truetype'),
-    url('fonts/icomoon.woff?x2uakf') format('woff'),
-    url('fonts/icomoon.svg?x2uakf#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ngz9x7');
+  src:  url('fonts/icomoon.eot?ngz9x7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ngz9x7') format('truetype'),
+    url('fonts/icomoon.woff?ngz9x7') format('woff'),
+    url('fonts/icomoon.svg?ngz9x7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,9 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-gmail:before {
+.icon-email:before {
   content: "\e900";
-  color: #d14836;
+}
+.icon-hamburger:before {
+  content: "\e904";
 }
 .icon-instagram:before {
   content: "\e901";
