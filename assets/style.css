@@ -5,7 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background:  #664a33;
     background: url('./back.jpg');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: contain;
     font-size: 16px;
 
@@ -34,36 +34,14 @@ ul{
 .menu-item .menu-social{
     color: white;
 }
-.menu-option:hover , .menu-social :hover {
+.menu-option:hover{
     background: rgb(229, 57, 60);
     position: relative;
     z-index: 1;
 }
-.menu-social {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.menu-social i{
-    height: 1.8em;
-    width: 2.1em;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding-top: .2em; */
-}
-.icon-platzi {
-    background: url('https://static.platzi.com/media/favicons/platzi_favicon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 3;
-}
 .icon-hamburger {
     position: fixed;
-    background-color: rgb(23, 26, 70);
+    background-color: rgb(18, 21, 70);
     color: white;
     width: 50px;
     height: 50px;
@@ -73,6 +51,7 @@ ul{
     align-items: center;
     font-size: 2em;
     display: none;
+    z-index: 3;
 }
 .name {
     display: block;
@@ -125,7 +104,7 @@ ul{
     /* padding: 30px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 8em 10em 6px;
+    grid-template-rows: 4em 10em 6em;
     grid-template-areas:"vitae-title vitae-title"
                         "vitae-profile vitae-me"
                         "vitae-btn-red ."; 
@@ -136,7 +115,7 @@ ul{
     grid-area: vitae-title;
     color: rgb(189, 188, 188);
     display: flex;
-    font-size: 2em;
+    font-size: 1.5em;
     justify-content: center;
     align-items: center;
 }   
@@ -153,6 +132,7 @@ ul{
     width: 5em;
     height: 5em;
     border-radius: 50%;
+    box-shadow: 2px 2px 4px 2px black;
 }
 .vitae-me .me-name {
     color: rgb(189, 188, 188);
@@ -176,7 +156,7 @@ ul{
     background: rgb(229, 57, 60);
     color: white;
     border: none;
-    font-size: 16px;
+    font-size: 1em;
 }
 .vitae-btn-red .btn-red:hover {
     background: rgb(197, 44, 47);
@@ -188,6 +168,7 @@ ul{
     margin: 0 10%;
     border: 1px solid rgba(199, 195, 195,.5);
     box-shadow:5px 5px 10px 10px rgb(16, 16, 17);
+    padding-bottom: 50px;
 }
 .projects-title {
     text-transform: uppercase;
@@ -195,28 +176,52 @@ ul{
     
 }
 .projects-list {
-    /* border: 1px solid red;  */
     margin: 0 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 #job-1 {
     background: url('./movi.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
-    width: 430px;
+    height: 200px;
+    width: auto;
 }
 #job-2 {
     background: url('./platzivideo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 250px;
-    width: 430px;
+    height: auto;
+    width: auto;
+}
+.menu-footer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.menu-social {
+    width: 100%;
+    background: #101010;
+    color: white;
+    padding: 15px;
+    font-size: 34px;
+}
+.menu-social:hover{
+    background: #3d3d3d;
+}
+.menu-social i{
+    display: block;
+    text-align: center;
+}
+.icon-platzi {
+    background: url('https://static.platzi.com/media/favicons/platzi_favicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 @media screen and (max-width:767px){
     body {
-        background-color: red;
+        background-color: rgb(122, 28, 28);
         font-size: 10px;
     }
     .icon-hamburger {
@@ -254,7 +259,7 @@ ul{
         align-self: center;
     }
     .vitae-me .me-name {
-        padding-top: 10px;
+        padding-top: 8px;
         color: rgb(189, 188, 188);
         text-transform: uppercase;
         display: block;
@@ -272,13 +277,20 @@ ul{
     .vitae-btn-red .btn-red {
         height: 3em;
         width: 11em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgb(229, 57, 60);
-        color: white; 
-        border: none;
-        font-size: 1em;
+    }
+    .projects-list {
+        margin: 1.5em;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1em;
+    }
+    #job-1 {
+        height: 16em;
+        width: 22em;
+    }
+    #job-2 {
+        height: 16em;
+        width: 22em;
     }
 }
 
