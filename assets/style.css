@@ -99,7 +99,6 @@ ul{
     background: rgb(197, 44, 47);
 }
 .vitae {
-    /* padding: 30px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 4em 10em 6em;
@@ -148,6 +147,7 @@ ul{
 .vitae-btn-red .btn-red {
     height: 58px;
     width: 156px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,10 +228,14 @@ ul{
     .menu {
         display: none;
     }
+    .content {
+        margin: 0 5%;
+        padding: 5% 5%;
+    }
     .vitae {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 8em 10em 6em 1fr;
+        grid-template-rows: 6em 8em 6em 1fr;
         grid-template-areas:"vitae-title"
                             "vitae-profile"
                             "vitae-me"
@@ -242,6 +246,7 @@ ul{
         font-size: 1.5em;
     }   
     .vitae-profile {
+        font-size: 1.5em;
         text-align: center;
     }
     .vitae-me{
@@ -276,6 +281,10 @@ ul{
         height: 3em;
         width: 11em;
     }
+    .projects {
+        margin: 0 5%;
+        padding-bottom: 30px;
+    }
     .projects-list {
         margin: 1.5em;
         grid-template-columns: 1fr;
@@ -289,6 +298,40 @@ ul{
     #job-2 {
         height: 16em;
         width: 22em;
+    }
+}
+@media screen and (max-width:480px){
+    .vitae-profile {
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width:320px){
+    
+    .vitae-title {
+        font-size: 1.3em;
+        width: 234px;
+    }   
+    .vitae-profile {
+        width: 234px;
+        font-size: 1em;
+    }
+    
+    .vitae {
+        /* display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4em 10em 6em;
+        grid-template-areas:"vitae-title vitae-title"
+                            "vitae-profile vitae-me"
+                            "vitae-btn-red .";  */
+        gap: 10px;
+        
+    }
+    .vitae-me .me-photo {
+        width: 6em;
+        height: 6em;
+    }
+    .vitae-btn-red {
+        width: 234px;
     }
 }
 
