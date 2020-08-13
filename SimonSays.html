@@ -5,10 +5,11 @@
     <title>Simon says</title>
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="./icons/style.css" />
+    <link rel="shortcut icon" href="./assets/logo.jpg">
     <style>
       body {
         margin: 0;
-        background: #1d084e;
+        background: #0F222D;
         display: flex;
         align-items: center;
         height: 100vh;
@@ -72,8 +73,8 @@
       }
 
       .btn-start {
-        width: 400px;
-        height: 100px;
+        width: 20em;
+        height: 10em;
         background: #ecf0f1;
         color: #2c3e50;
         font-size: 2.5rem;
@@ -86,9 +87,12 @@
         display: none;
       }
       .btn-start {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
-        width: 420px;
-        height: 100px;
+        width: 10em;
+        height: 2.5em;
         background: #ecf0f1;
         color: #2c3e50;
         border: none;
@@ -149,10 +153,10 @@
       <div id="violeta" class="color violeta right" data-color="violeta"></div>
       <div id="naranja" class="color naranja left" data-color="naranja"></div>
       <div id="verde" class="color verde right" data-color="verde"></div>
-      <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">
-        Empezar a jugar!
-      </button>
     </div>
+    <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">
+      Empezar a jugar!
+    </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script>
       const celeste = document.getElementById("celeste");
