@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevDuxAaron</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="description" content="Construye tu sitio web de la mano de un experto">
+    <link rel="shortcut icon" href="./assets/logo.jpg">
 </head>
-<!-- http://www.templatemonsterpreview.com/demo/70035.html?_ga=2.82012822.1261791263.1597844677-474045791.1597844677 -->
 <body>
     <section class="hero">
         <div class="hero-image">
-            <img src="" alt="">
+            <img src="./assets/pp-removebg-preview.png" alt="">
         </div>
-        <div class="hero title">
+        <div class="hero-title">
             <h1>DevDuxAaron</h1>
-            <h2>Frontend developer</h2>
+            <h3>Frontend developer</h3>
         </div>
         <div class="hero-social">
             <a href="" class="github"></a>
@@ -31,21 +33,22 @@
         <nav class="menu">
             <!-- <div class="menu-logo">Hello</div> -->
             <div class="burger">
-                <div class="burger-home">Home</div>
-                <div class="burger-about">About</div>
-                <div class="burger-skill">Skill</div>
-                <div class="burger-portfolio">Portfolio</div>
-                <div class="burger-blog">Blog</div>
-                <div class="burger-contact">Contact</div>
+                <a href="#home" class="burger-home">Home</a>
+                <a href="#aboutMe" class="burger-about">About</a>
+                <a href="#skills" class="burger-skill">Skill</a>
+                <a href="#portfolio" class="burger-portfolio">Portfolio</a>
+                <a href="#exercises" class="burger-blog">Exercises</a>
+                <a href="#contact" class="burger-contact">Contact</a>
             </div>
         </nav>
-        <section class="home">
+        <section class="home" id="home">
+            <div class="profile"><img src="./assets/pp-removebg-preview.png" alt=""></div>
             <h1>Hello</h1>
             <h3>My name is Aaron</h3>
             <p>I enjoy building websites from small businesses to robust web applications.</p>
-            <a href=""></a>
+            <a href="" class="button-blue home-button">View Portfolio</a>
         </section>
-        <section class="aboutMe">
+        <section class="aboutMe" id="aboutMe">
             <h2><i></i>About me</h2>
             <p>Hello,I’m Aaron Joel Creative Frontend Developer,
                 I create digital Products for Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, illum alias illo amet magnam maxime. Quia, dolore. Architecto dignissimos veniam consequatur! Iusto sed nisi voluptatum debitis, inventore fugit amet beatae.
@@ -78,9 +81,9 @@
                     </div>
                 </div>
             </div>
-            <a href=""Hire me></a>
+            <a href="" class="button-blue">Hire Me</a>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <h2><i></i>My skills</h2>
             <p> I have a diverse set of skills, ranging from design,
                  to HTML, CSS, Grid Layout, Responsive Desing, Javascript,
@@ -92,32 +95,44 @@
                     <li class="hability">
                         <span class="name">JavaScript</span>
                         <span class="percent">65%</span>
-                        <div class="bar"></div>
+                        <div class="bar">
+                            <div class="advance"></div>
+                        </div>
                     </li>
                     <li class="hability">
                         <span class="name">JavaScript</span>
                         <span class="percent">65%</span>
-                        <div class="bar"></div>
+                        <div class="bar">
+                            <div class="advance"></div>
+                        </div>
                     </li>
                     <li class="hability">
                         <span class="name">JavaScript</span>
                         <span class="percent">65%</span>
-                        <div class="bar"></div>
+                        <div class="bar">
+                            <div class="advance"></div>
+                        </div>
                     </li>
                     <li class="hability">
                         <span class="name">JavaScript</span>
                         <span class="percent">65%</span>
-                        <div class="bar"></div>
+                        <div class="bar">
+                            <div class="advance"></div>
+                        </div>
                     </li>
                     <li class="hability">
                         <span class="name">JavaScript</span>
                         <span class="percent">65%</span>
-                        <div class="bar"></div>
+                        <div class="bar">
+                            <div class="advance"></div>
+                        </div>
                     </li>
                     <li class="hability">
                         <span class="name">JavaScript</span>
                         <span class="percent">65%</span>
-                        <div class="bar"></div>
+                        <div class="bar">
+                            <div class="advance"></div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -130,7 +145,7 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2><i></i>My Portfolio</h2>
             <p> I have a diverse set of skills, ranging from design,
                  to HTML, CSS, Grid Layout, Responsive Desing, Javascript,
@@ -154,9 +169,75 @@
                 <a class="project" href=""><img src="" alt=""></a>
                 <a class="project" href=""><img src="" alt=""></a>
             </div>
-            <a href="" class="more-projects">More</a>
+            <a href="" class="button-blue">More</a>
         </section>
-        <section class="contact">
+        <section class="exercises" id="exercises">
+            <h2><i></i>Solved Exercises</h2>
+            <p> Some of the exercises that I've solved.
+            </p>
+            <!-- Soon -->
+            <!-- <nav class="menu-selected">
+                <ul>
+                    <li class="filter">All</li>
+                    <li class="filter">Jvumsa</li>
+                    <li class="filter">UVA</li>
+                    <li class="filter">TopCoder</li>
+                    <li class="filter">Others</li>
+                </ul>
+            </nav> -->
+            <div class="exercises-list">
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+                <a class="exercise" href="">
+                    <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
+                    <h4>Id: 1987</h4>
+                </a>
+            </div>
+            <a href="" class="button-blue">More</a>
+        </section>
+        <section class="contact" id="contact">
             <h2><i></i>Contact Me</h2>
             <p> I have a diverse set of skills, ranging from design,
                  to HTML, CSS, Grid Layout, Responsive Desing, Javascript,
