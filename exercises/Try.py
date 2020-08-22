@@ -40,6 +40,7 @@
 #     print(res)
 
 
+<<<<<<< HEAD
 # while True:
 #     try:
 #         a,b,c = map(int,input().split())
@@ -118,3 +119,4 @@ for i in range(x):
     m = m - (m // 2)
     n = n - 1
     print(m*n)
+
