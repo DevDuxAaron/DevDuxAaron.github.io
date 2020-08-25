@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 100vh;
+    gap: 20px;
+    background-color: #0F0F0F;
+    color: #eceff1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+/* General */
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #eceff1;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+section {
+    background-color: #222222;
+    margin: 15px;
+    padding: 40px;
+}
+/* Componenets */
+.button-blue {
+    padding: 10px;
+    background-color: #2196f3;
+}
+/* Parts */
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+.hero-image img{
+    height: 15em;
+}
+.hero-title {
+    background-color: #2c2c2c;
+    padding: 5px 15px;
+    text-align: center;
+}
+.menu {
+    background-color: #222222;
+    margin: 1em;
+}
+.menu .burger {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+.menu .burger [class ^=burger-] {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu .burger [class ^=burger-]:hover {
+    background-color: #2196f3;
+}
+main {
+    overflow: auto;
+    display: grid;
+    grid-template-rows: repeat(6,1fr) ;
+}
+.home {
+    display: grid;
+    grid-template-columns: 1fr 15em;
+    grid-template-rows: 1fr 2em 4em 2.8em;
+    grid-template-areas:"greet profile"
+                        "greeting profile"
+                        "description profile"
+                        "button profile";
+}
+.home .profile {
+    grid-area: profile;
+}
+.home .profile img {
+    background-color: #2c2c2c;
+    width: 12em;
+    border-radius: 50%;
+}
+.home h1{
+    margin: 0;
+    grid-area: greet;
+    font-size: 3em;
+}
+.home h3 {
+    margin: 0;
+    grid-area: greeting;
+    font-size: 1.5em;
+}
+.home p{
+    margin: 0;
+    grid-area: description;
+}
+.home a{
+    text-align: center;
+    width: 7em;
+    grid-area: button;
+}
+.container-aboutMe {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+}
+.aboutMe-list {
+    display: grid;
+    grid-template-columns: 1fr 1em 1fr;
+    grid-template-areas: "";
+    gap: 1em;
+}
+.container-skills {
+    background-color: #2c2c2c;
+    padding: 30px;
+}
+.skills-title {
+    text-transform: uppercase;
+}
+.habilities-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.hability {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-areas:". percent"
+                        "name bar";
+    gap: 5px;
+}
+.hability .percent {
+    grid-area: percent;
+    position: relative;
+    left: 63%;
+}
+.hability .name {
+    grid-area: name;
+}
+.hability .bar {
+    grid-area: bar;
+    background-color: #424242;
+}
+.hability .bar .advance {
+    height: 100%;
+}
+#javascript .percent {
+    left: 63%;
+}
+#python .percent {
+    left: 78%;
+}
+#java .percent {
+    left: 51%;
+}
+#html-know .percent {
+    left: 88%;
+}
+#css-know .percent {
+    left: 68%;
+}
+#cpp .percent {
+    left: 28%;
+}
+#javascript .bar .advance {
+    width: 65%;
+    background-color: #fbc02d;
+}
+#python .bar .advance {
+    width: 80%;
+    background-color: #3f51b5;
+}
+#java .bar .advance {
+    width: 53%;
+    background-color: #2196f3;
+}
+#html-know .bar .advance {
+    width: 90%;
+    background-color: #ef5350;
+}
+#css-know .bar .advance {
+    width: 70%;
+    background-color: #26a69a;
+}
+#cpp .bar .advance {
+    width: 30%;
+    background-color: #ab47bc;
+}
+.exercises-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 1.5em;
+}
+.exercise {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.exercise img {
+    width: 50px;
+}
