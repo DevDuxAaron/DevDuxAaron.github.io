@@ -186,7 +186,6 @@ main {
 }
 #cpp .bar .advance {
     width: 30%;
-    background-color: #ab47bc;
 }
 .exercises-list {
     display: grid;
