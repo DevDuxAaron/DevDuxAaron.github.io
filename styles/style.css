@@ -104,11 +104,11 @@ main {
 }
 .container-aboutMe {
     display: grid;
-    grid-template-columns: .5fr 1fr;
+    grid-template-columns: 1fr .8fr;
 }
 .aboutMe-list {
     display: grid;
-    grid-template-columns: 1fr 1em 1fr;
+    grid-template-columns: 3.5em 1em 1fr;
     grid-template-areas: "";
     gap: 1em;
 }
@@ -186,6 +186,7 @@ main {
 }
 #cpp .bar .advance {
     width: 30%;
+    background-color: #ab47bc;
 }
 .exercises-list {
     display: grid;
