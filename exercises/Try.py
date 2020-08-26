@@ -39,26 +39,6 @@
 #     res = 'Si' if x == y else 'No'
 #     print(res)
 
-
-<<<<<<< HEAD
-while True:
-    try:
-        a,b,c = map(int,input().split())
-        mul = a*b
-        if mul<=c:
-            print(mul)
-        else:
-            while mul>c:
-                if a >= b:
-                    a -=1
-                else:
-                    b-=1
-                mul = a*b
-            print(mul)
-    except EOFError:
-        break
-=======
-<<<<<<< HEAD
 # while True:
 #     try:
 #         a,b,c = map(int,input().split())
@@ -131,11 +111,24 @@ while True:
 #     except EOFError:
 #         break
 
-x = int(input())
-for i in range(x):
-    n , m = map(int,input().split())
-    m = m - (m // 2)
-    n = n - 1
-    print(m*n)
+# x = int(input())
+# for i in range(x):
+#     n , m = map(int,input().split())
+#     m = m - (m // 2)
+#     n = n - 1
+#     print(m*n)
 
->>>>>>> 5fe31fb2e3a824b5171489a9f10b5a0b5bb259ef
+
+# import math
+
+# def es_primo(x):
+#     if x == 1:
+#         return False
+#     else:
+#         for i in range(2 ,int(math.sqrt(x))+1):
+#             if x % i == 0:
+#                 return False
+#     return True
+
+
+# print(is_prime(6))
