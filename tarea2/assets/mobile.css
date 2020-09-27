@@ -1,0 +1,72 @@
+body{
+    font-size: 12px;
+}
+
+.problem {
+    grid-template-columns: 1fr;
+    padding: 5%;
+    gap: 5%;
+}
+
+.formula {
+    padding: 1rem 0;
+}
+
+.formula img{
+    width: 50vw;
+}
+
+.diff {
+    grid-template-columns: 1fr;
+    padding: 5% 5% 0;
+    gap: 2rem;
+    grid-template-areas:  "fromB"
+                "formulaB"
+                "fromH"
+                "formulaH"
+                "fromS"
+                "formulaS";
+}
+
+.forB{
+    grid-area: fromB;
+}
+
+.formulaB{
+    grid-area: formulaB;
+}
+
+.forH{
+    grid-area: fromH;
+}
+
+.formulaH{
+    grid-area: formulaH;
+}
+
+.forS{
+    grid-area: fromS;
+}
+
+.formulaS{
+    grid-area: formulaS;
+}
+
+.data{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 3% 5% 0;
+}
+
+.data-input form{
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.result{
+    padding: 0 2rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}

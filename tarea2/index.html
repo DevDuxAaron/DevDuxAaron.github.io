@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula de Manning</title>
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/mobile.css" media="screen and (max-width:480px)">
+</head>
+<body>
+    <header>
+        <h1 class="title">Fórmula de Manning</h1>
+        <h2 class="title">Propagación del error</h2>
+        <h3 class="title">Estudiante: Aaron Joel Limachi Quispe</h3>
+    </header>
+    <main>
+        <section class="problem">
+            <p class="description">
+                La fórmula de Manning​ es una evolución de la fórmula de Chézy para el
+                 cálculo de la velocidad del agua en canales abiertos y tuberías,
+                 propuesta por el ingeniero irlandés Robert Manning en 1889.
+                 Esta es la forma de la fórmula para un canal rectangular.
+            </p>
+            <picture class="formula">
+                <img src="./assets/formula.png">
+            </picture>
+        </section>
+        <section class="diff">
+            <p class="description forB">
+                Derivada parcial de Q respecto de B
+            </p>
+            <p class="description forH">
+                Derivada parcial de Q respecto de H
+            </p>
+            <p class="description forS">
+                Derivada parcial de Q respecto de S
+            </p>
+            <picture class="formula formulaB">
+                <img src="./assets/fromB.png">
+            </picture>
+            <picture class="formula formulaH">
+                <img src="./assets/fromH.png">
+            </picture>
+            <picture class="formula formulaS">
+                <img src="./assets/fromS.png">
+            </picture>
+        </section>
+        <section class="data">
+            <article class="data-input">
+                <form action="">
+                    <label for="n_value">
+                        <span>n:</span>
+                        <input type="number" name="" id="n_value" required placeholder="0.03">
+                    </label>
+                    <label for="B_value">
+                        <span>B(m):</span>
+                        <input type="number" name="" id="B_value" required placeholder="20">
+                    </label>
+                    <label for="H_value">
+                        <span>H(m):</span>
+                        <input type="number" name="" id="H_value" required placeholder="0.3">
+                    </label>
+                    <label for="S_value">
+                        <span>S:</span>
+                        <input type="number" name="" id="S_value" required placeholder="0.0003">
+                    </label>
+
+                    <label for="dn_value">
+                        <span><i>d</i> n:</span>
+                        <input type="number" name="" id="dn_value" required placeholder="0.03">
+                    </label>
+                    <label for="dB_value">
+                        <span><i>d</i> B(m):</span>
+                        <input type="number" name="" id="dB_value" required placeholder="20">
+                    </label>
+                    <label for="dH_value">
+                        <span><i>d</i> H(m):</span>
+                        <input type="number" name="" id="dH_value" required placeholder="0.3">
+                    </label>
+                    <label for="dS_value">
+                        <span><i>d</i> S:</span>
+                        <input type="number" name="" id="dS_value" required placeholder="0.0003">
+                    </label>
+                    <div></div>
+                    <input type="button" value="Calcular" class="btn" onclick="calculate()">
+                </form>
+            </article>
+            <article class="result">
+                <div id="error">dQ = </div>
+                <div id="original">Q = </div>
+                <div id="sintetic"></div>
+                <div id="between"></div>
+            </article>
+        </section>
+    </main>
+    <script src="./logic.js"></script>
+</body>
+</html>

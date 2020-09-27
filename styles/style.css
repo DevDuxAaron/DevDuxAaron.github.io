@@ -5,7 +5,7 @@ body {
     grid-template-columns: 25% 1fr;
     grid-template-rows: 100vh;
     gap: 20px;
-    background-color: #0F0F0F;
+    background-color: #0f0f15;
     color: #eceff1;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -25,10 +25,14 @@ section {
     margin: 15px;
     padding: 40px;
 }
-/* Componenets */
+/*  */
 .button-blue {
-    padding: 10px;
+    width: 5rem;
+    height: 2rem;
     background-color: #2196f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* Parts */
 .hero-image {
@@ -151,17 +155,20 @@ main {
 }
 #python .percent {
     left: 78%;
+    width: fit-content;
 }
 #java .percent {
     left: 51%;
 }
 #html-know .percent {
     left: 88%;
+    width: fit-content;
 }
 #css-know .percent {
     left: 68%;
 }
 #cpp .percent {
+    width: fit-content;
     left: 28%;
 }
 #javascript .bar .advance {

@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevDuxAaron</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/tablet.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width: 440px)">
     <meta name="description" content="Construye tu sitio web de la mano de un experto">
     <link rel="shortcut icon" href="./assets/logo.jpg">
 </head>
 <body>
     <section class="hero">
-        <div class="hero-image">
-            <img src="./assets/pp-removebg-preview.png" alt="">
-        </div>
+        <picture class="hero-image">
+            <source srcset="./assets/normal.png" media="min-width:1023px">
+            <img src="./assets/small.png" alt="photo profile">
+        </picture>
         <div class="hero-title">
             <h1>DevDuxAaron</h1>
             <h3>Frontend developer</h3>
@@ -42,24 +45,28 @@
             </div>
         </nav>
         <section class="home" id="home">
-            <div class="profile"><img src="./assets/pp-removebg-preview.png" alt=""></div>
+            <picture class="profile">
+                <source srcset="./assets/normal.png" media="min-width:1023px">
+                <img src="./assets/small.png" alt="">
+            </picture>
             <h1>Hello</h1>
             <h3>My name is Aaron</h3>
             <p>I enjoy building websites from small businesses to robust web applications.</p>
-            <a href="" class="button-blue home-button">View Portfolio</a>
+            <a href="" class="button-blue">View Portfolio</a>
         </section>
         <section class="aboutMe" id="aboutMe">
             <h2><i></i>About me</h2>
-            <p>Hello,I’m Aaron Joel Creative Frontend Developer,
+            <p>This page is still on development.
+                Hello,I’m Aaron Joel Creative Frontend Developer,
                 I create digital Products for Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, illum alias illo amet magnam maxime. Quia, dolore. Architecto dignissimos veniam consequatur! Iusto sed nisi voluptatum debitis, inventore fugit amet beatae.
             </p>
             <div class="container-aboutMe">
-                <div class="aboutMe-menu">
+                <!-- <div class="aboutMe-menu">
                     <div class="logo">Logo Design</div>
                     <div class="websites">Websites</div>
                     <div class="software">Software</div>
                     <div class="apps">Applications</div>
-                </div>
+                </div> -->
                 <div class="aboutMe-details">
                     <h3>Personal details</h3>
                     <div class="aboutMe-list">
@@ -138,7 +145,7 @@
             </div>
             <div class="container-languages">
                 <h3 class="languages">Languages skills</h3>
-                <p class="description"></p>
+                <p class="description">Strong knowledge on English and Spanish. Got graduated form the CBA as an honor student.</p>
                 <div class="language-bar">
                 </div>
                 <div class="language-bar">
@@ -147,9 +154,7 @@
         </section>
         <section class="portfolio" id="portfolio">
             <h2><i></i>My Portfolio</h2>
-            <p> I have a diverse set of skills, ranging from design,
-                 to HTML, CSS, Grid Layout, Responsive Desing, Javascript,
-                 Bootstrap, Version control with Git and SCRUM
+            <p> Here are some projects that I've worked on. Coming soon!
             </p>
             <!-- Soon -->
             <!-- <nav class="menu-selected">
@@ -161,7 +166,7 @@
                     <li class="filter">Games</li>
                 </ul>
             </nav> -->
-            <div class="portfolio-projects">
+            <!-- <div class="portfolio-projects">
                 <a class="project" href=""><img src="" alt=""></a>
                 <a class="project" href=""><img src="" alt=""></a>
                 <a class="project" href=""><img src="" alt=""></a>
@@ -169,11 +174,11 @@
                 <a class="project" href=""><img src="" alt=""></a>
                 <a class="project" href=""><img src="" alt=""></a>
             </div>
-            <a href="" class="button-blue">More</a>
+            <a href="" class="button-blue">More</a> -->
         </section>
         <section class="exercises" id="exercises">
             <h2><i></i>Solved Exercises</h2>
-            <p> Some of the exercises that I've solved.
+            <p> Some of the exercises that I've solved. Coming soon!
             </p>
             <!-- Soon -->
             <!-- <nav class="menu-selected">
@@ -185,7 +190,7 @@
                     <li class="filter">Others</li>
                 </ul>
             </nav> -->
-            <div class="exercises-list">
+            <!-- <div class="exercises-list">
                 <a class="exercise" href="">
                     <img src="https://jv.umsa.bo/template/sam/image/juez-patito2.svg" alt="">
                     <h4>Id: 1987</h4>
@@ -235,14 +240,16 @@
                     <h4>Id: 1987</h4>
                 </a>
             </div>
-            <a href="" class="button-blue">More</a>
+            <a href="" class="button-blue">More</a> -->
         </section>
         <section class="contact" id="contact">
             <h2><i></i>Contact Me</h2>
-            <p> I have a diverse set of skills, ranging from design,
-                 to HTML, CSS, Grid Layout, Responsive Desing, Javascript,
-                 Bootstrap, Version control with Git and SCRUM
+            <p> We can develop and design anything beyond your imagination.
+                 About my work, I don’t say anything because my work speaks.
+                  For more, you can ask my clients and they will tell you how much satisfied they are with my job.
+                   So, what are you waiting for?
             </p>
+            <a href="" class="button-blue">Hire Me</a>
             <div class="contact-form">
                 <!-- pending -->
             </div>

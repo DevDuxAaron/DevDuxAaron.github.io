@@ -1,0 +1,26 @@
+body {
+    grid-template-columns: 0% 1fr;
+    gap: 0;
+    font-size: 64%;
+    grid-template-rows: 50rem;
+}
+.hero {
+    margin: 0;
+    padding: 0;
+}
+.hero-image {
+    display: none;
+}
+.hero-title {
+    padding: 0;
+    display: none;
+}
+.hero-description{
+    display: none;
+}
+main {
+    overflow-x: hidden;
+    width: fit-content;
+    display: grid;
+    grid-template-rows: repeat(6,1fr) ;
+}
