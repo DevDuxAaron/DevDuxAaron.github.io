@@ -4,32 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aaron</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/icons.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="stylesheet"
       href="./styles/tablet.css"
-      media="screen and (min-width: 768px)"
+      media="screen and (min-width:769px)"
     />
     <link
       rel="stylesheet"
       href="./styles/desktop.css"
-      media="screen and (min-width: 440px)"
+      media="screen and (min-width:1025px)"
     />
     <meta
       name="description"
       content="Construye tu sitio web de la mano de un experto"
     />
     <link rel="shortcut icon" href="./assets/logo.jpg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   </head>
   <body>
-    <header class="wow zoomIn" id="home">
+    <header id="home">
       <div class="logo">
-        <h1>AARON</h1>
+        <h1 class="name">AARON</h1>
       </div>
       <nav class="navigation">
         <ul>
@@ -49,19 +46,28 @@
     <main class="main-header" id="home1">
       <section class="welcome">
         <div class="greeting">
-          <h3 class="title-3">HEY, I'm <span>Aaron</span> Web Developer</h3>
+          <h3 class="title-3">
+            HEY,<br />
+            I'm <span>Aaron</span> <br />
+            Web Developer
+          </h3>
         </div>
-        <div class="image">
-          <figure class="photo">
-            <source media="(min-width: )" srcset="" />
-            <img src="" alt="aaron-photo" />
-          </figure>
+        <div class="btn-container">
+          <a href="" class="btn-email">Email me</a>
         </div>
-        <div class="social">
-          <ul>
-            <li class="icon"></li>
-            <li class="icon"></li>
-            <li class="icon"></li>
+        <div class="social-container">
+          <ul class="social">
+            <!-- <li class="icon"><a href="" target="blank"><i class="icon-instagram"></i></a></li> -->
+            <li class="icon">
+              <a href="https://twitter.com/42Joel54" target="blank"
+                ><i class="icon-twitter"></i
+              ></a>
+            </li>
+            <li class="icon">
+              <a href="https://github.com/DevDuxAaron" target="blank"
+                ><i class="icon-github"></i
+              ></a>
+            </li>
           </ul>
         </div>
       </section>
@@ -70,74 +76,124 @@
           <h3 class="title-3">ABOUT</h3>
         </div>
         <figure class="about-photo">
-          <source media="(min-width: )" srcset="" />
-          <img src="" alt="aaron-photo" />
+          <source media="(min-width: 1300px)" srcset="./assets/small.png" />
+          <img
+            src="./assets/normal.png"
+            alt="aaron-photo"
+            alt="Aaron's photo"
+            title="Aaron"
+          />
         </figure>
-        <div class="description">
+        <article class="description">
           <h3 class="title-3">I'm Aaron</h3>
           <p class="text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores
-            esse excepturi natus, doloribus quisquam, sit eaque eos error
-            temporibus iste nobis, voluptates quis tempore quibusdam unde
-            sapiente vero rerum ut?
+            Hello! Aaron Joel. Front-End developer and university student. I
+            define myself as a team player and an adventure soul. I face new
+            challenges with a proactive attitude, next to perseverance, and
+            a constant learning mindset.
           </p>
-        </div>
+        </article>
       </section>
       <section class="skills" id="skills">
         <div class="title">
           <h3 class="title-3">SKILLS</h3>
         </div>
         <div class="badges">
-            <div class="hability">
-                <span class="name">HTML 5</span>
-                <span class="percent">92%</span>
-                <div class="bar"></div>
-            </div>
-            <div class="hability">
-                <span class="name">HTML 5</span>
-                <span class="percent">92%</span>
-                <div class="bar"></div>
-            </div>
-            <div class="hability">
-                <span class="name">HTML 5</span>
-                <span class="percent">92%</span>
-                <div class="bar"></div>
-            </div>
-            <div class="hability">
-                <span class="name">HTML 5</span>
-                <span class="percent">92%</span>
-                <div class="bar"></div>
-            </div>
-        </div>
-        <div class="image">
-          <figure class="photo">
-            <source media="(min-width: )" srcset="" />
-            <img src="" alt="aaron-photo" />
-          </figure>
+          <div class="hability hab-1">
+            <span class="hab-name">HTML 5</span>
+            <span class="percent">75%</span>
+            <div class="bar" id="html"></div>
+          </div>
+          <div class="hability hab-2">
+            <span class="hab-name">CSS</span>
+            <span class="percent">70%</span>
+            <div class="bar" id="css"></div>
+          </div>
+          <div class="hability hab-3">
+            <span class="hab-name">JavaScript</span>
+            <span class="percent">55%</span>
+            <div class="bar" id="js"></div>
+          </div>
+          <div class="hability hab-4">
+            <span class="hab-name">Python</span>
+            <span class="percent">85%</span>
+            <div class="bar" id="python"></div>
+          </div>
         </div>
       </section>
       <!-- <section class="work" id="work">
           <div class="gallery"></div>
       </section> -->
       <section class="contact" id="contact">
+        <div class="title">
+          <h3 class="title-3">CONTACT</h3>
+        </div>
         <div class="form-contact">
-            <form action="" method="get">
-                <!-- fullname, email, message, send -->
-            </form>
+          <form action="" method="get" class="form">
+            <!-- fullname, email, message, send -->
+            <label for="fullname" class="label-form">
+              <h4>Fullname</h4>
+              <input
+                type="text"
+                id="fullname"
+                placeholder="Tell me your name"
+                required
+                aria-required="true"
+              />
+            </label>
+            <label for="email" class="label-form">
+              <h4>Email</h4>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+                aria-required="true"
+              />
+            </label>
+            <label for="message" class="label-form content-message">
+              <h4>Message</h4>
+              <input
+                type="text"
+                id="message"
+                placeholder="I'd like to know more about..."
+                cols="40"
+                rows="5"
+                required
+                aria-required="true"
+              />
+            </label>
+            <label for="send" class="label-form">
+              <input
+                type="submit"
+                id="send"
+                value="Send"
+                aria-required="true"
+              />
+            </label>
+          </form>
         </div>
       </section>
     </main>
     <footer class="footer">
-        <div class="title">
-            <h3 class="title-4">Thank You</h3>
-        </div>
-        <div class="social-2">
-            <ul>
-              <li class="icon-2"></li>
-              <li class="icon-2"></li>
-              <li class="icon-2"></li>
-            </ul>
-          </div>
+      <div class="title">
+        <h3 class="title-3">Thank You</h3>
+      </div>
+      <div>
+        <ul class="social">
+          <!-- <li class="icon"><a href=""><i class="icon-instagram"></i></a></li> -->
+          <li class="icon">
+            <a href="https://twitter.com/42Joel54" target="blank"
+              ><i class="icon-twitter"></i
+            ></a>
+          </li>
+          <li class="icon">
+            <a href="https://github.com/DevDuxAaron" target="blank"
+              ><i class="icon-github"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

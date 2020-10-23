@@ -1,44 +1,69 @@
-.menu{
-    display: none;
+*{
+    font-size: 20px;
 }
-.home {
-    width: min-width(320px);
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3rem 2rem 4em 2.8em;
-    grid-template-areas:"profile"
-                        "greet"
-                        "greeting"
-                        "description"
-                        "button";
+.welcome{
+    /* border: solid red 1px; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3rem 3rem;
+    grid-template-areas: "greeting ."
+                         "btn-email ."
+                         "social .";
 }
-.home .profile {
-    grid-area: profile;
-}
-.home .profile img {
-    background-color: #2c2c2c;
-    width: 12em;
-    border-radius: 50%;
-}
-.home h1{
-    margin: 0;
-    grid-area: greet;
-    font-size: 3em;
-}
-.home h3 {
-    margin: 0;
+.greeting{
     grid-area: greeting;
-    font-size: 1.5em;
 }
-.home p{
-    margin: 0;
-    grid-area: description;
+.title-3 span{
+    font-size: 1.8rem;
 }
-.home a{
-    text-align: center;
-    width: 7em;
-    grid-area: button;
+.btn-container{
+    grid-area: btn-email;
 }
-.container-aboutMe {
+.social-container{
+    grid-area: social;
+}
+.about{
     display: grid;
-    grid-template-columns: 1fr .8fr;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 2);
+    grid-template-areas: "title title"
+                         "photo description";
+}
+.title{
+    grid-area: title;
+}
+.about-photo{
+    grid-area: photo;
+}
+.description{
+    padding: 20% 0;
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+}
+.badges{
+    display: grid;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-areas: ". hab-1"
+                         ". hab-2"
+                         ". hab-3"
+                         ". hab-4";
+}
+.hab-1{
+    grid-area: hab-1;
+}
+.hab-2{
+    grid-area: hab-2;
+}
+.hab-3{
+    grid-area: hab-3;
+}
+.hab-4{
+    grid-area: hab-4;
+}
+.contact{
+    margin: 5rem 12rem;
+}
+.contact .title{
+    margin: 2rem;
 }

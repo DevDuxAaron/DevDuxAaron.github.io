@@ -1,26 +1,14 @@
-body {
-    grid-template-columns: 0% 1fr;
-    gap: 0;
-    font-size: 64%;
-    grid-template-rows: 50rem;
+ #home{
+    margin: 0 4rem;
 }
-.hero {
-    margin: 0;
-    padding: 0;
+.about-photo{
+    display: flex;
+    justify-content: center;
 }
-.hero-image {
-    display: none;
+.about-photo img{
+    width: 50px;
+    width: auto;
 }
-.hero-title {
-    padding: 0;
-    display: none;
-}
-.hero-description{
-    display: none;
-}
-main {
-    overflow-x: hidden;
-    width: fit-content;
-    display: grid;
-    grid-template-rows: repeat(6,1fr) ;
+.form #send{
+    margin: 2rem;
 }
