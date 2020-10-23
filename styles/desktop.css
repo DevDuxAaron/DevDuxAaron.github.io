@@ -28,6 +28,11 @@
     grid-template-areas: "title title"
                          "photo description";
 }
+.about-photo img{
+    width: 75vw;
+    height: 75vh;
+    width: auto;
+}
 .title{
     grid-area: title;
 }

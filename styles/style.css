@@ -5,13 +5,16 @@
     --dark-blue: #2E279D;
     --blue: #4D80E4;
     --light-blue: #46B3E6;
-    --celeste: #ACE5FF;
+    --sky-blue: #ACE5FF;
     --gray: #606060;
-    --white: #FFFFFF;
+    --white: #f7f7f7;
 }
 /* general */
 *{
     font-family: "be vietnam";
+}
+html{
+    background-color: var(--white);
 }
 ul{
     padding: 0;
@@ -75,6 +78,7 @@ h1, h2, h3, h4, h5 ,h6{
     background-color: var(--blue);
     height: .3rem;
     margin: .2rem;
+    border-radius: 3px;
 }
 .welcome{
     margin-top: 6rem;
@@ -91,7 +95,7 @@ h1, h2, h3, h4, h5 ,h6{
     justify-content: center;
 }
 .btn-email{
-    background-color: var(--dark-blue);
+    background-color: var(--light-blue);
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -114,7 +118,8 @@ h1, h2, h3, h4, h5 ,h6{
     margin-bottom: 6rem;
 }
 .about-photo img{
-    width: 100%;
+    width: 70vw;
+    height: 42vh;
     border-radius: 10px;
 }
 .description{
@@ -149,6 +154,7 @@ h1, h2, h3, h4, h5 ,h6{
 .bar{
     grid-area: bar;
     background-color: var(--dark-blue);
+    border-radius: 4px;
 }
 #html{
     width: 75%;
@@ -191,6 +197,9 @@ h1, h2, h3, h4, h5 ,h6{
     min-height: 2rem;
     padding-left: .7rem;
 }
+.label-form textarea{
+    border-radius: 5px;
+}
 .content-message input{
     min-height: 4em;
 }
@@ -200,6 +209,7 @@ h1, h2, h3, h4, h5 ,h6{
 }
 #send{
     padding: 0;
+    background-color: var(--white);
 }
 .footer{
     background-color: var(--blue);

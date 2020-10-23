@@ -6,7 +6,8 @@
     justify-content: center;
 }
 .about-photo img{
-    width: 50px;
+    width: 45vw;
+    height: 45vh;
     width: auto;
 }
 .form #send{
