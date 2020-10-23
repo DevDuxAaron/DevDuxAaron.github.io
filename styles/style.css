@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .about-photo img{
     width: 70vw;
-    height: 42vh;
+    height: 75vh;
     border-radius: 10px;
 }
 .description{
@@ -199,6 +199,7 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .label-form textarea{
     border-radius: 5px;
+    width: 100%;
 }
 .content-message input{
     min-height: 4em;
