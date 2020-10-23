@@ -29,15 +29,16 @@
                          "photo description";
 }
 .about-photo img{
-    width: 75vw;
-    height: 75vh;
+    width: 22rem;
+    height: 22rem;
     width: auto;
+    grid-area: photo;
 }
 .title{
     grid-area: title;
 }
 .about-photo{
-    grid-area: photo;
+    /* grid-area: photo; */
 }
 .description{
     padding: 20% 0;

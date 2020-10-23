@@ -115,11 +115,14 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .about{
     margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
+}
+.about-photo{
+    display: flex;
+    justify-content: center;
 }
 .about-photo img{
-    width: 70vw;
-    height: 75vh;
+    width: 14rem;
     border-radius: 10px;
 }
 .description{
@@ -127,7 +130,7 @@ h1, h2, h3, h4, h5 ,h6{
     margin: 2rem;
 }
 .skills{
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 5rem;
 }
 .hability{

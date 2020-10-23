@@ -1,13 +1,9 @@
  #home{
     margin: 0 4rem;
 }
-.about-photo{
-    display: flex;
-    justify-content: center;
-}
 .about-photo img{
-    width: 45vw;
-    height: 45vh;
+    width: 16rem;
+    height: 16rem;
     width: auto;
 }
 .form #send{
