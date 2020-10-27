@@ -38,7 +38,7 @@
     grid-area: title;
 }
 .about-photo{
-    /* grid-area: photo; */
+    grid-area: photo;
 }
 .description{
     padding: 20% 0;
