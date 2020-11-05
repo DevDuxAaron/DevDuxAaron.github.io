@@ -12,6 +12,7 @@
 /* general */
 *{
     font-family: "be vietnam";
+    box-sizing: border-box;
 }
 html{
     background-color: var(--white);
@@ -170,6 +171,96 @@ h1, h2, h3, h4, h5 ,h6{
 }
 #python{
     width: 80%;
+}
+.gallery-container{
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+}
+.project-card{
+    width: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 0 20px #00000070;
+    position: relative;
+}
+.top-section img{
+    width: 100%;
+
+}
+.menuicon{
+    position: absolute;
+    width: 22px;
+    left: 20px;
+    top: 20px;
+}
+.menuicon span{
+    width: 100%;
+    height: 3px;
+    background: var(--white);
+    display: block;
+    margin-bottom: 6px;
+    opacity: .5;
+    transition: .4s;
+    cursor: pointer;
+}
+.menuicon .s1{
+    left: -5px;
+}
+.menuicon .s2{
+    left: 5px;
+}
+.menuicon:hover span{
+    left: 0;
+}
+.card-name{
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1em;
+    opacity: .5;
+    color: var(--gray);
+}
+.card-name span{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.info-section{
+    padding: 2rem;
+    color: var(--gray);
+}
+.info-section h2{
+    position: relative;
+    font-size: 16px;
+}
+.border{
+    width: 2rem;
+    height: 3px;
+    background: var(--sky-blue);
+}
+.info-section p{
+    text-align: justify;
+    font-size: 14px;
+}
+.s-m{
+    padding: 10px;
+    display: flex;
+}
+.fab{
+    margin: 5px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--sky-blue);
+    font-size: 12px;
+}
+.fab:hover{
+    border: solid var(--dark-blue) 2px;
+    padding: 6px;
+    box-shadow: 3px 3px 5px 0px var(--gray);
 }
 .contact{
     margin-top: 5rem;
