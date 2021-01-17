@@ -187,6 +187,7 @@ h1, h2, h3, h4, h5 ,h6{
 }
 .top-section img{
     width: 100%;
+    min-height: 240px;
     max-height: 390px;
 }
 .menuicon{
@@ -220,7 +221,7 @@ h1, h2, h3, h4, h5 ,h6{
     left: 20px;
     font-size: 2rem;
     font-weight: 900;
-    line-height: 1em;
+    line-height: 0.7em;
     opacity: .7;
     color: var(--gray);
 }
