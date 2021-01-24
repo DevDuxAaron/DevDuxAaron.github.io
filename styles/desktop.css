@@ -46,30 +46,9 @@
     display: flex;
     flex-direction: column;
 }
-.badges{
-    display: grid;
-    grid-template-columns: repeat(1fr, 2);
-    grid-template-rows: repeat(1fr, 4);
-    grid-template-areas: ". hab-1"
-                         ". hab-2"
-                         ". hab-3"
-                         ". hab-4";
-}
-.hab-1{
-    grid-area: hab-1;
-}
-.hab-2{
-    grid-area: hab-2;
-}
-.hab-3{
-    grid-area: hab-3;
-}
-.hab-4{
-    grid-area: hab-4;
-}
-.contact{
-    margin: 5rem 12rem;
-}
-.contact .title{
-    margin: 2rem;
+.gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+.project-card a i{
+    font-size: 2rem;
 }

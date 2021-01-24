@@ -5,48 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aaron</title>
     <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./assets/icons.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="stylesheet"
       href="./styles/tablet.css"
-      media="screen and (min-width:769px)"
+      media="screen and (min-width:767px)"
     />
     <link
       rel="stylesheet"
       href="./styles/desktop.css"
-      media="screen and (min-width:1025px)"
+      media="screen and (min-width:1023px)"
     />
     <meta
       name="description"
-      content="Construye tu sitio web de la mano de un experto"
+      content="Construye tu sitio web de la mano de un experto. DevDuxAaron"
     />
-    <link rel="shortcut icon" href="./assets/logo.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
   </head>
   <body>
     <header id="home">
       <div class="logo">
         <h1 class="name">AARON</h1>
-      </div>
-      <nav class="navigation">
-        <ul>
-          <li><a href="#home1" aria-label="to home" name="home">Home</a></li>
-          <li><a href="#about" aria-label="to about" name="about">About</a></li>
-          <li>
-            <a href="#skills" aria-label="to skills" name="skills">Skills</a>
-          </li>
-          <li><a href="#work" aria-label="to work" name="work">Work</a></li>
-          <li>
-            <a href="#contact" aria-label="to contact" name="contact"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="hamburger">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
       </div>
     </header>
     <main class="main-header" id="home1">
@@ -63,15 +43,14 @@
         </div>
         <div class="social-container">
           <ul class="social">
-            <!-- <li class="icon"><a href="" target="blank"><i class="icon-instagram"></i></a></li> -->
             <li class="icon">
               <a
                 href="https://twitter.com/42Joel54"
                 target="blank"
                 aria-label="link to twitter"
                 name="twitter"
-                ><i class="icon-twitter"></i
-              ></a>
+                ><i class="fab fa-twitter-square"></i>
+              </a>
             </li>
             <li class="icon">
               <a
@@ -79,7 +58,7 @@
                 target="blank"
                 aria-label="link to twitter"
                 name="twitter"
-                ><i class="icon-blogger"></i
+                ><i class="fab fa-blogger"></i
               ></a>
             </li>
             <li class="icon">
@@ -88,61 +67,18 @@
                 target="blank"
                 aria-label="link to github"
                 name="github"
-                ><i class="icon-github"></i
+                ><i class="fab fa-github-square"></i
               ></a>
             </li>
           </ul>
         </div>
       </section>
-      <section class="about" id="about">
-        <div class="title">
-          <h3 class="title-3">ABOUT</h3>
-        </div>
-        <figure class="about-photo">
-          <source media="(min-width: 1300px)" srcset="./assets/small.png" />
-          <img
-            src="./assets/normal.png"
-            alt="aaron-photo"
-            alt="Aaron's photo"
-            title="Aaron"
-          />
-        </figure>
-        <article class="description">
-          <h3 class="title-3">I'm Aaron</h3>
-          <p class="text">
-            Hello! Aaron Joel. Front-End developer and university student. I
-            define myself as a team player and an adventure soul. I face new
-            challenges with a proactive attitude, next to perseverance, and a
-            constant learning mindset.
-          </p>
-        </article>
-      </section>
       <section class="skills" id="skills">
         <div class="title">
           <h3 class="title-3">SKILLS</h3>
         </div>
-        <!-- Add React JS -->
-        <div class="badges">
-          <div class="hability hab-1">
-            <span class="hab-name">HTML 5</span>
-            <span class="percent">75%</span>
-            <div class="bar" id="html"></div>
-          </div>
-          <div class="hability hab-2">
-            <span class="hab-name">CSS</span>
-            <span class="percent">70%</span>
-            <div class="bar" id="css"></div>
-          </div>
-          <div class="hability hab-3">
-            <span class="hab-name">JavaScript</span>
-            <span class="percent">55%</span>
-            <div class="bar" id="js"></div>
-          </div>
-          <div class="hability hab-4">
-            <span class="hab-name">Python</span>
-            <span class="percent">85%</span>
-            <div class="bar" id="python"></div>
-          </div>
+        <div class="graph">
+          <canvas id="myChart"></canvas>
         </div>
       </section>
       <section class="work" id="work">
@@ -151,183 +87,103 @@
         </div>
         <div class="gallery-container">
           <article class="project-card">
-            <div class="top-section">
-              <img src="./assets/projects/batabit.png" />
-              <div class="menuicon">
-                <span class="s1"></span>
-                <span class="s2"></span>
-              </div>
-              <div class="card-name">
-                <span>Batabit</span><br>
-                By Aaron
-              </div>
-            </div>
-            <div class="info-section">
-              <h2>
-                About
-                <div class="border"></div>
-              </h2>
-              <p>
-                Project developed within a Platzi course. A web page for a Bitcoin and crypto currencies trading company.
-                 This page was developed with mobile first pattern. It's implemented from a Figma design and doesn't have any interactivy due to it's lacking of Javascript.
-              </p>
-              <h2>
-                Visit
-                <div class="border"></div>
-              </h2>
-              <div class="s-m">
-                <a href="https://devduxaaron.github.io/Batabit/" class="fab" target="blank">Project finished</a>
-                <a href="https://github.com/DevDuxAaron/Batabit" class="fab" target="blank">Github repository</a>
-              </div>
-            </div>
+            <a class="tooltip" href="https://devduxaaron.github.io/Batabit/">
+              <span class="tooltiptext">Project Batabit</span>
+              <i class="fab fa-jedi-order"></i>
+            </a>
+            <a class="tooltip" href="https://github.com/DevDuxAaron/Batabit">
+              <span class="tooltiptext">Project Repository</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <h4 class="projecttitle">Batabit</h4>
           </article>
+
           <article class="project-card">
-            <div class="top-section">
-              <img src="./assets/projects/platzivideo.jpeg" />
-              <div class="menuicon">
-                <span class="s1"></span>
-                <span class="s2"></span>
-              </div>
-              <div class="card-name">
-                <span>PLatzi Video</span><br>
-                By Aaron
-              </div>
-            </div>
-            <div class="info-section">
-              <h2>
-                About
-                <div class="border"></div>
-              </h2>
-              <p>
-                Project developed within a Platzi course. A web page that simulates an streaming page.
-                 This page was developed with mobile first pattern. It's implemented with React JS.
-              </p>
-              <h2>
-                Visit
-                <div class="border"></div>
-              </h2>
-              <div class="s-m">
-                <!-- <a href="https://devduxaaron.github.io/PlatziVideo/" class="fab" target="blank">Project finished</a> -->
-                <a href="https://github.com/DevDuxAaron/platzivideo" class="fab" target="blank">Github repository</a>
-              </div>
-            </div>
+            <a class="tooltip" href="https://github.com/DevDuxAaron/platzivideo">
+              <span class="tooltiptext">Project Repository</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <h4 class="projecttitle">Platzi Video</h4>
           </article>
+
           <article class="project-card">
-            <div class="top-section">
-              <img src="./assets/projects/WikiMe.png" />
-              <div class="menuicon">
-                <span class="s1"></span>
-                <span class="s2"></span>
-              </div>
-              <div class="card-name">
-                <span>Batabit</span><br>
-                By Aaron
-              </div>
-            </div>
-            <div class="info-section">
-              <h2>
-                About
-                <div class="border"></div>
-              </h2>
-              <p>
-                Project developed within a Traversy media video. A web page to search in the wikipedia.
-                 This page was developed with mobile first pattern.
-              </p>
-              <h2>
-                Visit
-                <div class="border"></div>
-              </h2>
-              <div class="s-m">
-                <!-- <a href="https://devduxaaron.github.io/SearchApp/" class="fab" target="blank" disabled="disabled">Project finished</a> -->
-                <a href="https://github.com/DevDuxAaron/SearchApp" class="fab" target="blank">Github repository</a>
-              </div>
-            </div>
+            <a class="tooltip" href="https://github.com/DevDuxAaron/SearchApp">
+              <span class="tooltiptext">Project Repository</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <h4 class="projecttitle">Search App</h4>
           </article>
+
+          <article class="project-card">
+            <a class="tooltip" href="https://devduxaaron.github.io/hamburguesa/">
+              <span class="tooltiptext">Project Hamburguesa</span>
+              <i class="fab fa-jedi-order"></i>
+            </a>
+            <a class="tooltip" href="https://github.com/DevDuxAaron/hamburguesa">
+              <span class="tooltiptext">Project Repository</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <h4 class="projecttitle">Hamburguesa</h4>
+          </article>
+
+          <article class="project-card">
+            <a class="tooltip" href="https://devduxaaron.github.io/jumpgame/">
+              <span class="tooltiptext">Project Jump Game</span>
+              <i class="fab fa-jedi-order"></i>
+            </a>
+            <a class="tooltip" href="https://github.com/DevDuxAaron/jumpgame">
+              <span class="tooltiptext">Project Repository</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <h4 class="projecttitle">Jump Game</h4>
+          </article>
+
+          <article class="project-card">
+            <a class="tooltip" href="https://github.com/DevDuxAaron/simpleProjects">
+              <span class="tooltiptext">Project Repository</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <h4 class="projecttitle">Mini projects Python</h4>
+          </article>
+
         </div>
       </section>
-      <!-- <section class="contact" id="contact">
-        <div class="title">
-          <h3 class="title-3">CONTACT</h3>
-        </div>
-        <div class="form-contact">
-          <form action="" method="get" class="form">
-            <label for="fullname" class="label-form">
-              <h4>Fullname</h4>
-              <input
-                type="text"
-                id="fullname"
-                placeholder="Tell me your name"
-                required
-                aria-required="true"
-              />
-            </label>
-            <label for="email" class="label-form">
-              <h4>Email</h4>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-              />
-            </label>
-            <label for="message" class="label-form content-message">
-              <h4>Message</h4>
-              <textarea
-                id="message"
-                placeholder="I'd like to know more about..."
-                cols="40"
-                rows="5"
-                required
-              ></textarea>
-            </label>
-            <label for="send" class="label-form">
-              <input
-                type="submit"
-                id="send"
-                value="Send"
-              />
-            </label>
-          </form>
-        </div>
-      </section> -->
     </main>
     <footer class="footer">
       <div class="title">
         <h3 class="title-3">Thank You</h3>
       </div>
-      <div>
-        <ul class="social">
-          <!-- <li class="icon"><a href=""><i class="icon-instagram"></i></a></li> -->
-          <li class="icon">
-            <a
-              href="https://twitter.com/42Joel54"
-              target="blank"
-              aria-label="to twitter"
-              name="twitter"
-              ><i class="icon-twitter"></i
-            ></a>
-          </li>
-          <li class="icon">
-            <a
-              href="https://devduxaaron.blogspot.com/"
-              target="blank"
-              aria-label="link to twitter"
-              name="twitter"
-              ><i class="icon-blogger"></i
-            ></a>
-          </li>
-          <li class="icon">
-            <a
-              href="https://github.com/DevDuxAaron"
-              target="blank"
-              aria-label="to github"
-              name="github"
-              ><i class="icon-github"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
+      <ul class="social">
+        <li class="icon">
+          <a
+            href="https://twitter.com/42Joel54"
+            target="blank"
+            aria-label="link to twitter"
+            name="twitter"
+            ><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="icon">
+          <a
+            href="https://devduxaaron.blogspot.com/"
+            target="blank"
+            aria-label="link to blogspot"
+            name="twitter"
+            ><i class="fab fa-blogger-b"></i
+          ></a>
+        </li>
+        <li class="icon">
+          <a
+            href="https://github.com/DevDuxAaron"
+            target="blank"
+            aria-label="link to github"
+            name="github"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+      </ul>
+      <p>Made with love❤️ by DevDuxAaron</p>
     </footer>
+    <script src="./js/graphics.js"></script>
   </body>
 </html>
 <!-- https://www.sketch.com/s/fc3e831c-210d-4adb-b46a-1a5712d3070e/a/qljZY2#Inspector -->

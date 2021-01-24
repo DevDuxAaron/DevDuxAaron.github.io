@@ -6,6 +6,10 @@
     height: 16rem;
     width: auto;
 }
-.form #send{
-    margin: 2rem;
+.graph {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.gallery-container {
+  grid-template-columns: repeat(3, 1fr);
 }
