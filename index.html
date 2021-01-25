@@ -1,201 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aaron</title>
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="./styles/tablet.css"
-      media="screen and (min-width:767px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./styles/desktop.css"
-      media="screen and (min-width:1023px)"
-    />
-    <meta
-      name="description"
-      content="Construye tu sitio web de la mano de un experto. DevDuxAaron"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header id="home">
-      <div class="logo">
-        <h1 class="name">AARON</h1>
-      </div>
-    </header>
-    <main class="main-header" id="home1">
-      <section class="welcome">
-        <div class="greeting">
-          <h2 class="title-3">
-            HEY,<br />
-            I'm <span>Aaron</span> <br />
-            Web Developer
-          </h2>
-        </div>
-        <div class="btn-container">
-          <a href="" class="btn-email">Email me</a>
-        </div>
-        <div class="social-container">
-          <ul class="social">
-            <li class="icon">
-              <a
-                href="https://twitter.com/42Joel54"
-                target="blank"
-                aria-label="link to twitter"
-                name="twitter"
-                ><i class="fab fa-twitter-square"></i>
-              </a>
-            </li>
-            <li class="icon">
-              <a
-                href="https://devduxaaron.blogspot.com/"
-                target="blank"
-                aria-label="link to twitter"
-                name="twitter"
-                ><i class="fab fa-blogger"></i
-              ></a>
-            </li>
-            <li class="icon">
-              <a
-                href="https://github.com/DevDuxAaron"
-                target="blank"
-                aria-label="link to github"
-                name="github"
-                ><i class="fab fa-github-square"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="skills" id="skills">
-        <div class="title">
-          <h3 class="title-3">SKILLS</h3>
-        </div>
-        <div class="graph">
-          <canvas id="myChart"></canvas>
-        </div>
-      </section>
-      <section class="work" id="work">
-        <div class="title">
-          <h3 class="title-3">PROJECTS</h3>
-        </div>
-        <div class="gallery-container">
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/Batabit/">
-              <span class="tooltiptext">Project Batabit</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/Batabit">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Batabit</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://github.com/DevDuxAaron/platzivideo">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Platzi Video</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://github.com/DevDuxAaron/SearchApp">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Search App</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/hamburguesa/">
-              <span class="tooltiptext">Project Hamburguesa</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/hamburguesa">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Hamburguesa</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/jumpgame/">
-              <span class="tooltiptext">Project Jump Game</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/jumpgame">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Jump Game</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://github.com/DevDuxAaron/simpleProjects">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Mini projects Python</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/jumpgame/">
-              <span class="tooltiptext">Project Pacman Basic</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/pacman">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Pacman Basic</h4>
-          </article>
-
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="title">
-        <h3 class="title-3">Thank You</h3>
-      </div>
-      <ul class="social">
-        <li class="icon">
-          <a
-            href="https://twitter.com/42Joel54"
-            target="blank"
-            aria-label="link to twitter"
-            name="twitter"
-            ><i class="fab fa-twitter"></i></a>
-        </li>
-        <li class="icon">
-          <a
-            href="https://devduxaaron.blogspot.com/"
-            target="blank"
-            aria-label="link to blogspot"
-            name="twitter"
-            ><i class="fab fa-blogger-b"></i
-          ></a>
-        </li>
-        <li class="icon">
-          <a
-            href="https://github.com/DevDuxAaron"
-            target="blank"
-            aria-label="link to github"
-            name="github"
-            ><i class="fab fa-github"></i
-          ></a>
-        </li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/logo/2.png" type="image/x-icon">
+  <meta name="description" content="Frontend developer @DevDuxAaron">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" media="screen and (min-width:767px)" href="./styles/tablet.css">
+  <link rel="stylesheet" media="screen and (min-width:1023px)" href="./styles/laptop.css">
+  <link rel="stylesheet" media="screen and (min-width:1439px)" href="./styles/laptop-L.css">
+  <title>Aaron Joel</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__home">
+      <a href="">AARON</a>
+    </h1>
+    <nav class="header__sections">
+      <ul>
+        <li>ABOUT</li>
+        <li>PROJECTS</li>
+        <li>CONTACT</li>
       </ul>
-      <p>Made with love❤️ by DevDuxAaron</p>
-    </footer>
-    <script src="./js/graphics.js"></script>
-  </body>
+    </nav>
+    <div class="header__menu__container">
+      <div class="header__menu">
+        <div class="b b-1"></div>
+        <div class="b b-2"></div>
+        <div class="b b-3"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <nav class="main__sideMenu">
+      <ul>
+        <li>MODEL Y</li>
+        <li>SAFETY</li>
+        <li>UTILITY</li>
+        <li>ALL-WHEEL DRIVE</li>
+        <li>RANGE</li>
+        <li>AUTOPILOT</li>
+        <li>INTERIOR</li>
+        <li>SPECS</li>
+        <li>ORDER</li>
+      </ul>
+    </nav>
+    <section class="main__intro">
+      <div class="main__intro__title__container">
+        <h2 class="main__intro__title">Aaron Joel</h2>
+        <span class="main__intro__subtitle">Frontend Developer</span>
+      </div>
+      <div class="main__intro__specs__container">
+        <ul class="main__intro__specs">
+          <li class="main__intro__specs__item">
+            <h3>51</h3>
+            <span>Proyectos completados</span>
+          </li>
+          <hr class="separate-line">
+          <li class="main__intro__specs__item">
+            <h3>3 <span class="unit"></span></h3>
+            <span>Lenguajes de programación</span>
+          </li>
+          <hr class="separate-line">
+          <li class="main__intro__specs__item">
+            <h3>4</h3>
+            <span>Frameworks & libreries</span>
+          </li>
+        </ul>
+        <div class="btn-container">
+          <a class="btn-light">CONTACT</a>
+        </div>
+      </div>
+      <div class="arrowDown">
+        <a href="">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+    <section class="main__about"></section>
+    <section class="main__projects"></section>
+    <section class="main__contact"></section>
+  </main>
+  <footer class="footer">
+    <ul>
+      <li class="footer__item">Tesla 2021</li>
+      <li class="footer__item">Privacy & Legal</li>
+      <li class="footer__item">Contact</li>
+      <li class="footer__item">Careers</li>
+    </ul>
+  </footer>
+</body>
 </html>
-<!-- https://www.sketch.com/s/fc3e831c-210d-4adb-b46a-1a5712d3070e/a/qljZY2#Inspector -->

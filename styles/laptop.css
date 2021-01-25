@@ -1,0 +1,29 @@
+:root{
+    --tds-font-size--20: 12px;
+    --tds-font-size--60: 24px;
+    --tds-font-size--70: 28px;
+    --tds-color--grey60: #eee;
+}
+.header {
+    grid-template-columns: 1fr 3%;
+}
+.main__intro{
+    grid-template-rows: 1fr 12% 8%;
+}
+.main__intro__specs__item h3 {
+    font-size: var(--tds-font-size--70);
+}
+.main__intro__specs__item h3 .unit{
+    font-size: var(--tds-font-size--60);
+}
+.main__intro__specs__item span{
+    font-size: 14px;
+}
+.arrowDown {
+    display: flex;
+    justify-content: center;
+    font-size: 7rem;
+}
+.arrowDown i{
+    color: var(--tds-color--grey60);
+}
