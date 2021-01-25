@@ -4,9 +4,9 @@
 .header {
     grid-template-columns: 1fr 5%;
 }
-.header__menu .b-1, .header__menu .b-3{
+/* .header__menu .b-1, .header__menu .b-3{
     background-color: var(--tds-color--black);
-}
+} */
 .main__intro{
     grid-template-rows: 1fr 25%;
 }

@@ -9,6 +9,7 @@
 }
 .main__intro{
     grid-template-rows: 1fr 12% 8%;
+    background-image: url("../assets/images/big-2.jpg");
 }
 .main__intro__specs__item h3 {
     font-size: var(--tds-font-size--70);
