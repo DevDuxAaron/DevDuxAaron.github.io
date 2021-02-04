@@ -185,6 +185,7 @@ ul {
   color: var(--tds-color--grey60);
   background: transparent;
   outline: none;
+  transition: 0.3s;
 }
 .btn-light:hover{
   font-weight: 400;
@@ -197,4 +198,41 @@ ul {
 }
 .arrowDown {
   display: none;
+}
+
+.main__about {
+  padding: 3.2rem 2.4rem;
+}
+.main__about__subtitle {
+  color: var(--tds-color--grey10);
+  font-size: var(--tds-font-size--40);
+  font-weight: 400;
+}
+.main__about__title {
+  color: var(--tds-color--grey10);
+  font-size: var(--tds-font-size--55);
+  font-weight: 500;
+}
+.main__about__description {
+  color: var(--tds-color--grey20);
+}
+.main__about__description__text {
+  font-size: var(--tds-font-size--30);
+}
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--tds-color--grey70);
+  background-color: var(--tds-color--black);
+}
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.footer__item {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: var(--tds-font-size--20);
+  font-weight: 500;
 }
