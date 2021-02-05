@@ -117,7 +117,8 @@ ul {
   grid-template-rows: 1fr 35%;
   background-image: url("../assets/images/medium-2.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  background-size: cover;
 }
 .main__intro__title__container{
   display: flex;
