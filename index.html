@@ -1,201 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aaron</title>
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="./styles/tablet.css"
-      media="screen and (min-width:767px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./styles/desktop.css"
-      media="screen and (min-width:1023px)"
-    />
-    <meta
-      name="description"
-      content="Construye tu sitio web de la mano de un experto. DevDuxAaron"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header id="home">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>DevDuxAaron</title>
+</head>
+<body>
+  <header class="header">
+    <section class="container">
       <div class="logo">
-        <h1 class="name">AARON</h1>
+        <a href="index.html">DevDuxAaron</a>
       </div>
-    </header>
-    <main class="main-header" id="home1">
-      <section class="welcome">
-        <div class="greeting">
-          <h2 class="title-3">
-            HEY,<br />
-            I'm <span>Aaron</span> <br />
-            Web Developer
+      <button class="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/></svg>
+        <svg class="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/></svg>
+      </button>
+      <nav class="menu">
+        <a href="#inicio">Home</a>
+        <a href="#acerca">About</a>
+        <a href="#servicios">Services</a>
+        <a href="#portafolio">Portfolio</a>
+        <a href="#testimonios">Testimonials</a>
+        <a href="#contacto">Contact</a>
+      </nav>
+    </section>
+  </header>
+  <section id="inicio" class="home">
+    <article
+      class="hero-image"
+      style="
+        --hero-image: url('../assets/hero-image-home.jpg');
+        --hero-attachment: fixed;"
+        >
+      <aside class="hero-image-opacity" style="--hero-opacity-color: var(--black-alpha-color);">
+        <div class="hero-image-content">
+          <h2 class="hero-image-title" style="--hero-text-color: var(--white-color);">
+            Welcome to <br> my site
           </h2>
+          <a href="#contacto" class="btn">CONTACT</a>
         </div>
-        <div class="btn-container">
-          <a href="" class="btn-email">Email me</a>
-        </div>
-        <div class="social-container">
-          <ul class="social">
-            <li class="icon">
-              <a
-                href="https://twitter.com/42Joel54"
-                target="blank"
-                aria-label="link to twitter"
-                name="twitter"
-                ><i class="fab fa-twitter-square"></i>
-              </a>
-            </li>
-            <li class="icon">
-              <a
-                href="https://devduxaaron.blogspot.com/"
-                target="blank"
-                aria-label="link to twitter"
-                name="twitter"
-                ><i class="fab fa-blogger"></i
-              ></a>
-            </li>
-            <li class="icon">
-              <a
-                href="https://github.com/DevDuxAaron"
-                target="blank"
-                aria-label="link to github"
-                name="github"
-                ><i class="fab fa-github-square"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="skills" id="skills">
-        <div class="title">
-          <h3 class="title-3">SKILLS</h3>
-        </div>
-        <div class="graph">
-          <canvas id="myChart"></canvas>
-        </div>
-      </section>
-      <section class="work" id="work">
-        <div class="title">
-          <h3 class="title-3">PROJECTS</h3>
-        </div>
-        <div class="gallery-container">
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/Batabit/">
-              <span class="tooltiptext">Project Batabit</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/Batabit">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Batabit</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://github.com/DevDuxAaron/platzivideo">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Platzi Video</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://github.com/DevDuxAaron/SearchApp">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Search App</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/hamburguesa/">
-              <span class="tooltiptext">Project Hamburguesa</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/hamburguesa">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Hamburguesa</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/jumpgame/">
-              <span class="tooltiptext">Project Jump Game</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/jumpgame">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Jump Game</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://github.com/DevDuxAaron/simpleProjects">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Mini projects Python</h4>
-          </article>
-
-          <article class="project-card">
-            <a class="tooltip" href="https://devduxaaron.github.io/jumpgame/">
-              <span class="tooltiptext">Project Pacman Basic</span>
-              <i class="fab fa-jedi-order"></i>
-            </a>
-            <a class="tooltip" href="https://github.com/DevDuxAaron/pacman">
-              <span class="tooltiptext">Project Repository</span>
-              <i class="fab fa-github"></i>
-            </a>
-            <h4 class="projecttitle">Pacman Basic</h4>
-          </article>
-
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="title">
-        <h3 class="title-3">Thank You</h3>
-      </div>
-      <ul class="social">
-        <li class="icon">
-          <a
-            href="https://twitter.com/42Joel54"
-            target="blank"
-            aria-label="link to twitter"
-            name="twitter"
-            ><i class="fab fa-twitter"></i></a>
-        </li>
-        <li class="icon">
-          <a
-            href="https://devduxaaron.blogspot.com/"
-            target="blank"
-            aria-label="link to blogspot"
-            name="twitter"
-            ><i class="fab fa-blogger-b"></i
-          ></a>
-        </li>
-        <li class="icon">
-          <a
-            href="https://github.com/DevDuxAaron"
-            target="blank"
-            aria-label="link to github"
-            name="github"
-            ><i class="fab fa-github"></i
-          ></a>
-        </li>
-      </ul>
-      <p>Made with love❤️ by DevDuxAaron</p>
-    </footer>
-    <script src="./js/graphics.js"></script>
-  </body>
+      </aside>
+    </article>
+  </section>
+  <section id="acerca" class="about">
+    <h2>Acerca</h2>
+  </section>
+  <section id="servicios" class="services">
+    <h2>Servicios</h2>
+  </section>
+  <section id="portafolio" class="portfolio">
+    <h2>Trabajos</h2>
+  </section>
+  <section id="testimonios" class="testimonials">
+    <h2>Testimonios</h2>
+  </section>
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+  </section>
+  <footer class="footer">
+    <small>Sitio inspirado en los diseños de <a href="https://jonmircha.com" target="_blank" rel="noopener">@jonmircha</a></small>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
 </html>
-<!-- https://www.sketch.com/s/fc3e831c-210d-4adb-b46a-1a5712d3070e/a/qljZY2#Inspector -->
