@@ -149,6 +149,10 @@ p {
   background-position: center;
   background-attachment: var(--hero-attachment);
 }
+.hero-image-content {
+  width: 100%;
+  min-width: 320px;
+}
 .hero-image-opacity {
   width: 100%;
   min-height: 100vh;
@@ -508,7 +512,7 @@ p {
     align-content: center;
   }
   .contact-cards {
-    grid-template-columns: repeat(4,24%);
+    grid-template-columns: repeat(2,48%);
   }
   .footer {
     margin-bottom: 0;
