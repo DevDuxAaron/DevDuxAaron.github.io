@@ -452,6 +452,10 @@ p {
   padding: .5rem 0;
   color: var(--title-color);
 }
+.portfolio-modal img {
+  max-width: 400px;
+  max-height: 400px;
+}
 .portfolio-details {
   display: grid;
   grid-template-columns: 40% 60%;
