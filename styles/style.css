@@ -444,6 +444,7 @@ p {
   max-width: 400px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: white;
 }
 .portfolio-modal h3 {
@@ -453,8 +454,8 @@ p {
   color: var(--title-color);
 }
 .portfolio-modal img {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 250px;
+  max-height: 250px;
 }
 .portfolio-details {
   display: grid;
