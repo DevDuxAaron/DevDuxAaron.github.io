@@ -1,9 +1,11 @@
 /* ********** Custom properties ********** */
 
 :root {
-  --first-color: #d90062;
+  /* --first-color: #d90062; */
+  --first-color: #FAFAFA;
   --first-alpha-color: rgba(217, 0, 98, 0.75);
-  --second-color: #14192d;
+  /* --second-color: #14192d; */
+  --second-color: #0c1e44;
   --secon-alpha-color: rgba(20, 25, 45, 0,75);
   --third-color: #501464;
   --third-alpha-color: rgba(80, 20, 100, 0.75);
@@ -71,6 +73,7 @@ h6 {
 img {
   max-width: 100%;
   height: auto;
+  border-radius: .5rem;
 }
 p {
   line-height: 1.6;
@@ -291,7 +294,7 @@ p {
   text-align: center;
   text-decoration: none;
   color: var(--white-color);
-  background-color: var(--first-color);
+  background-color: var(--second-color);
 }
 .container {
   margin-left: auto;
@@ -372,7 +375,7 @@ p {
 .contact-card > svg{
   width: 2rem;
   height: 2rem;
-  fill: var(--first-color);
+  fill: var(--second-color);
 }
 .contact-card > small {
   margin-top: -1rem;
@@ -382,7 +385,7 @@ p {
   padding: .5rem;
   text-align: center;
   color: var(--white-color);
-  background-color: var(--third-color);
+  background-color: var(--second-color);
 }
 .header {
   position: fixed;
@@ -423,11 +426,12 @@ p {
   width: 100%;
   height: 100%;
   padding: 1rem;
-  background-color: var(--first-alpha-color);
+  background-color: var(--second-color);
   color: var(--white-color);
   opacity: 0;
   pointer-events: none;
   transition: all .5s ease-in-out ;
+  border-radius: .5rem;
 }
 .portfolio-card:hover .portfolio-card-info{
   opacity: 1;
@@ -445,24 +449,28 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: var(--second-color);
+  border-radius: .5rem;
 }
 .portfolio-modal h3 {
   border-bottom: medium solid var(--first-color);
   margin: 1rem auto;
   padding: .5rem 0;
-  color: var(--title-color);
+  color: var(--first-color);
+}
+.portfolio-modal p {
+  color: var(--first-color);
 }
 .portfolio-modal img {
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 200px;
+  max-height: 200px;
 }
 .portfolio-details {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-auto-rows: 2rem;
 }
-.portfolio-details b {
+.portfolio-details small {
   color: var(--first-color);
 }
 .service-card {
@@ -475,12 +483,13 @@ p {
 }
 .service-card svg {
   margin-bottom: 1.25rem;
-  fill: var(--first-color);
+  fill: var(--second-color);
 }
 @media screen and (min-width: 768px){
   .contact-cards {
     display: grid;
-    grid-template-columns: repeat(2,48%);
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
   }
   .portfolio > .container {
@@ -517,7 +526,7 @@ p {
     align-content: center;
   }
   .contact-cards {
-    grid-template-columns: repeat(2,48%);
+    grid-template-columns: repeat(3,1fr);
   }
   .footer {
     margin-bottom: 0;
@@ -530,6 +539,7 @@ p {
   }
   .portfolio > .container {
     grid-template-columns: repeat(3, 1fr);
+    gap: .5rem
   }
   .portfolio .section-title {
     grid-column: span 3;
