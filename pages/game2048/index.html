@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048</title>
+    <script type="module" crossorigin src="/assets/index-ac481fd3.js"></script>
+    <!-- <link rel="stylesheet" href="/assets/index-55ac0877.css"> -->
+    <style>
+      :root{font-family:Inter,system-ui,Avenir,Helvetica,Arial,sans-serif;line-height:1.5;font-weight:400;color-scheme:light dark;color:#ffffffde;background-color:#242424;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%}a{font-weight:500;color:#646cff;text-decoration:inherit}a:hover{color:#535bf2}body{margin:0;display:flex;place-items:center;min-width:320px;min-height:100vh}h1{font-size:3.2em;line-height:1.1}#app{max-width:1280px;margin:0 auto;padding:2rem;text-align:center}button{border-radius:8px;border:1px solid transparent;padding:.6em 1.2em;font-size:1em;font-weight:500;font-family:inherit;background-color:#1a1a1a;cursor:pointer;transition:border-color .25s}button:hover{border-color:#646cff}button:focus,button:focus-visible{outline:4px auto -webkit-focus-ring-color}.heading{display:flex;justify-content:space-between}.score-container{display:flex;justify-content:center;align-items:center}.grid{background-color:#cdc1b5;border:5px solid #bbada0;display:grid;grid-template-columns:repeat(4,1fr);border-radius:.5em}.box{width:4rem;height:4rem;border:5px solid #bbada0;font-size:40px;display:flex;justify-content:center;align-items:center}.cover-screen{position:absolute;top:0;left:0;background-color:#faf8ef;color:#000;height:100%;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}#start-button{background-color:#8f7a66;padding:1em 2em;border:none;border-radius:.5em;font-size:1em;letter-spacing:.2px;color:#fff}.hide{display:none}.box-2{background-color:#eee4da;color:#727371}.box-4{background-color:#eee1c9;color:#727371}.box-8{background-color:#f3b27a;color:#fff}.box-16{background-color:#f69664;color:#fff}.box-32{background-color:#f77c5f;color:#fff}.box-64{background-color:#f75f3b;color:#fff}.box-128{background-color:#edd073;color:#fff}.box-256{background-color:#edcc63;color:#fff}.box-512{background-color:#edc651;color:#fff}.box-1024{background-color:#eec744;color:#fff}.box-2048{background-color:#ecc230;color:#fff}@media (prefers-color-scheme: light){:root{color:#213547;background-color:#fff}a:hover{color:#747bff}button{background-color:#f9f9f9}}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <script>
+      (function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))i(o);new MutationObserver(o=>{for(const n of o)if(n.type==="childList")for(const r of n.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function s(o){const n={};return o.integrity&&(n.integrity=o.integrity),o.referrerPolicy&&(n.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?n.credentials="include":o.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function i(o){if(o.ep)return;o.ep=!0;const n=s(o);fetch(o.href,n)}})();document.querySelector("#app").innerHTML=`
+<div class="container hide">
+  <div class="heading">
+    <h1>2048</h1>
+    <div class="score-container">
+      Score:
+      <span id="score">0</span>
+    </div>
+  </div>
+  <div class="grid"></div>
+</div>
+<div class="cover-screen">
+  <h2 id="over-text" class="hide">Game Over</h2>
+  <p id="result"></p>
+  <button id="start-button">Start Game</button>
+</div>
+`;let c=document.querySelector(".grid");const f=document.getElementById("start-button"),d=document.querySelector(".container"),a=document.querySelector(".cover-screen"),C=document.getElementById("result"),x=document.getElementById("over-text");let l,u,h,m,v=0,g=0,E=4,L=4,y;const q=(e,t)=>{let s=0,i=0;return t?(s=e.changedTouches[0].pageX,i=e.changedTouches[0].pageY):(s=e.touches[0].pageX,i=e.touches[0].pageY),[s,i]},I=()=>{for(let e=0;e<E;e++)for(let t=0;t<L;t++){const s=document.createElement("div");s.classList.add("box"),s.setAttribute("data-position",`${e}_${t}`),c==null||c.appendChild(s)}},O=e=>{for(let t=0;t<e.length-1;t++)if(e[t]===e[t+1])return!0;return!1},z=()=>{for(const e in l){if(O(l[e]))return!0;let t=[];for(let s=0;s<L;s++)t.push(l[e][s]);if(O(t))return!0}return!1},M=e=>Math.floor(Math.random()*e.length),B=()=>{for(const e in l)return l[e].indexOf(0)!==-1;return!1},D=()=>{z()||(a==null||a.classList.remove("hide"),d==null||d.classList.add("hide"),x==null||x.classList.remove("hide"),C&&(C.innerText=`Final score: ${u}`),f&&(f.innerText="Restart Game"))},b=()=>{if(B()){let e=M(l),t=M(l[M(l)]);if(l[e][t]===0){l[e][t]=2;let s=document.querySelector(`[data-position = '${e}_${t}']`);s&&(s.innerText="2",s.classList.add("box-2"))}else b()}else D()},p=e=>e.filter(t=>t),P=(e,t)=>{e=t?p(e).reverse():p(e);for(let i=0;i<e.length-1;i++)e[i]===e[i+1]&&(e[i]+=e[i+1],e[i+1]=0,u+=e[i]);e=t?p(e).reverse():p(e);let s=4-e.length;for(;s>0;)t?e.unshift(0):e.push(0),s-=1;return e},S=(e,t)=>{let s=document.querySelector(`[data-position='${e}_${t}']`);s&&(s.innerHTML=l[e][t]!==0?l[e][t].toString():"",s.classList.value="",s.classList.add("box",`box-${l[e][t]}`))},$=(e,t,s,i)=>{for(let o=0;o<e;o++){let n=[];for(let r=0;r<t;r++)i?n.push(l[r][o]):n.push(l[o][r]);n=P(n,s);for(let r=0;r<t;r++)i?(l[r][o]=n[r],S(r,o)):(l[o][r]=n[r],S(o,r))}},w=({reverse:e,vertical:t,horizontal:s})=>()=>{t?$(L,E,e,!0):s&&$(E,L,e,!1),setTimeout(b,200)},X=w({reverse:!0,vertical:!0,horizontal:!1}),Y=w({reverse:!1,vertical:!0,horizontal:!1}),A=w({reverse:!0,vertical:!1,horizontal:!0}),G=w({reverse:!1,vertical:!1,horizontal:!0}),T=()=>{const e=document.getElementById("score");e&&(e.innerText=u==null?void 0:u.toString())};document.addEventListener("keyup",e=>{e.code==="ArrowLeft"?G():e.code==="ArrowRight"?A():e.code==="ArrowUp"?Y():e.code==="ArrowDown"&&X(),T()});c==null||c.addEventListener("touchstart",e=>{[v,g]=q(e,!1)});c==null||c.addEventListener("touchend",e=>{[h,m]=q(e,!0);let t=Math.max(v,h)-Math.min(v,h),s=Math.max(g,m)-Math.min(g,m);Math.abs(s)>Math.abs(t)?y=m>g?"down":"up":y=h>v?"right":"left",{up:Y,down:X,left:G,right:A}[y](),T()});const R=()=>{u=0,T(),c&&(c.innerHTML=""),l=[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],d==null||d.classList.remove("hide"),a==null||a.classList.add("hide"),I(),b(),b()};f==null||f.addEventListener("click",()=>{R(),y=""});
+    </script>
+  </body>
+</html>
